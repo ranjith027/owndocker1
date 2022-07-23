@@ -12,6 +12,6 @@ WORKDIR /var/www/html
 
 ADD https://github.com/mdn/beginner-html-site-styled.git ./code.zip
 
-RUN unzip code.zip && mv ./beginner-html-site-styled.git* .
+RUN unzip code.zip && mv ./beginner-html-site-styled.git/* .
 
 CMD apachectl-DFOREGROUND
