@@ -10,8 +10,8 @@ RUN yum -y install httpd unzip
 
 WORKDIR /var/www/html
 
-ADD https://github.com/mdn/beginner-html-site-styled.git ./code.zip
+ADD https://github.com/mdn/beginner-html-site-styled/archive/refs/heads/gh-pages.zip ./code.zip
 
-RUN unzip ./code.zip && mv ./beginner-html-site-styled.git/* .
+RUN unzip ./code.zip && mv ./beginner-html-site-styled-gh-pages/* .
 
 CMD apachectl-DFOREGROUND
