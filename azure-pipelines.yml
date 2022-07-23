@@ -22,7 +22,12 @@ stages:
     steps:
     - task: Docker@2
       inputs:
+          containerRegistry: 'docker-serviceconnection'
+          command: 'login'
+    - task: Docker@2
+      inputs:
         containerRegistry: 'docker-serviceconnection'
         repository: 'owndocker1'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
+
