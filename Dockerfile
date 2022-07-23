@@ -1,6 +1,7 @@
 FROM centos
 
 LABEL "user"="ranjith"
+#Final
 
 RUN cd /etc/yum.repos.d/ && \
       sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-* && \
